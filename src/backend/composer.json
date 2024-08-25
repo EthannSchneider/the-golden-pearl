@@ -1,0 +1,16 @@
+{
+    "name": "ethannschneider/the-golden-pearl",
+    "type": "project",
+    "license": "MIT",
+    "version": "1.0.0",
+    "authors": [
+        {
+            "name": "Ethann Schneider",
+            "email": "ethann@shkermit.ch"
+        }
+    ],
+    "require": {
+        "react/http": "^1.10",
+        "react/socket": "^1.16"
+    }
+}
