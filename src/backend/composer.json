@@ -8,9 +8,5 @@
             "name": "Ethann Schneider",
             "email": "ethann@shkermit.ch"
         }
-    ],
-    "require": {
-        "react/http": "^1.10",
-        "react/socket": "^1.16"
-    }
+    ]
 }
