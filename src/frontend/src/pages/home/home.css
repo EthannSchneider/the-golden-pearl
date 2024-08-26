@@ -1,0 +1,40 @@
+#homeSlider {
+    position: relative;
+}
+
+#container {
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    width: 50%;
+    height: 50%;
+    overflow: hidden;
+    background-color: #3b3b3be2;
+    border-radius: 10px;
+    font-size: 90%;
+}
+
+@media (max-width: 798px) {
+    #container {
+        top: 0%;
+        left: 0%;
+        height: 100%;
+        width: 100%;
+        border-radius: 0px;
+        background-color: #3b3b3b71;
+    }
+}
+
+@media (max-width: 1000px) {
+    #WhoAreWe {
+        flex-direction: column;
+    }
+    #WhoAreWe > div {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    #WhoAreWe > div > img {
+        width: 70%;
+    }
+}
