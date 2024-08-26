@@ -14,7 +14,7 @@ function App() {
           <div class="collapse navbar-collapse" id="navbarMenu">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link" href="/who_are_we">Who are we ?</a>
+                <a class="nav-link" href="/#WhoAreWe">Who are we ?</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="/daily_menu">Daily Menu</a>
