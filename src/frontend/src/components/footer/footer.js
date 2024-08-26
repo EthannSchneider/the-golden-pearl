@@ -1,5 +1,3 @@
-import './footer.css';
-
 function App() {
   return (
     <footer className="Footer">

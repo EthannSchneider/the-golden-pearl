@@ -1,5 +1,3 @@
-import './header.css';
-
 function App() {
   return (
     <header className="Header" class="sticky-top">
