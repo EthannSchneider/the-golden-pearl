@@ -1,6 +1,6 @@
 function App() {
   return (
-    <header className="Header" class="sticky-top">
+    <header className="Header" class="sticky-top text-bg-light">
       <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
           <a class="navbar-brand" href="/" >
@@ -14,16 +14,10 @@ function App() {
           <div class="collapse navbar-collapse" id="navbarMenu">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link" href="/">Who are we ?</a>
+                <a class="nav-link" href="/who_are_we">Who are we ?</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="/daily_menu">Daily Menu</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/">Menu</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/">History</a>
               </li>
             </ul>
           </div>

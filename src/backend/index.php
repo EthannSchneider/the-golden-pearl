@@ -17,7 +17,7 @@ function frontend_redirect($route) {
     } else {
         if (file_exists('views' . $route)) {
             change_content_type($route);
-            include 'views' . $route;
+            include "views/$route";
         } else {
             $_SERVER['REQUEST_URI'] = '/notfound';
             include 'views/index.html';
