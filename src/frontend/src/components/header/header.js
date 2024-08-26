@@ -4,7 +4,7 @@ function App() {
       <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
           <a class="navbar-brand" href="/" >
-            <img src="logo256.png" alt="logo" width="70" />
+            <img src="assets/img/logo256.png" alt="logo" width="70" />
           </a>
 
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">

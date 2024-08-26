@@ -3,7 +3,7 @@ function App() {
     <footer className="Footer">
       <div  class="back-color py-2">
         <div class="d-flex justify-content-center py-2">
-          <img src="logo_black256.png" alt="logo" width="50" />
+          <img src="assets/img/logo_black256.png" alt="logo" width="50" />
         </div>
         <h4 class="d-flex justify-content-center py-2">The Golden Pearl</h4>
         <div class="d-flex justify-content-around">
