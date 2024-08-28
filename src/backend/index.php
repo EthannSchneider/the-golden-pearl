@@ -1,12 +1,13 @@
 <?php
 require 'vendor/autoload.php';
 
-$route = $_SERVER['REQUEST_URI'] ?? '/';
+session_start();
 
+$route = $_SERVER['REQUEST_URI'] ?? '/';
 $route = explode('?', $route)[0];
 
 if (str_starts_with($route, '/api')) {
-    include 'router.php';
+    require 'router.php';
 } else {
     frontend_redirect($route);
 }
@@ -17,7 +18,7 @@ function frontend_redirect($route) {
     } else {
         if (file_exists('views' . $route)) {
             change_content_type($route);
-            include "views/$route";
+            echo file_get_contents("views/$route"); 
         } else {
             $_SERVER['REQUEST_URI'] = '/notfound';
             include 'views/index.html';
