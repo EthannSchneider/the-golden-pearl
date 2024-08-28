@@ -13,7 +13,7 @@ This is a website for a restaurant called The Golden Pearl. The website is a tem
 
 1. Run 
 ```bash
-./install.sh
+./build.sh
 ```
 
 ## Author
