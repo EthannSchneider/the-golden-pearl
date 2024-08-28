@@ -6,20 +6,20 @@ function App() {
       <div id="homeSlider" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="assets/img/banner1.png" class="d-block w-100" alt="banner 1" />
+            <img src="/assets/img/banner1.png" class="d-block w-100" alt="banner 1" />
           </div>
           <div class="carousel-item">
-            <img src="assets/img/banner2.png" class="d-block w-100" alt="banner 2" />
+            <img src="/assets/img/banner2.png" class="d-block w-100" alt="banner 2" />
           </div>
           <div class="carousel-item">
-            <img src="assets/img/banner3.png" class="d-block w-100" alt="banner 3" />
+            <img src="/assets/img/banner3.png" class="d-block w-100" alt="banner 3" />
           </div>
           <div class="carousel-item">
-            <img src="assets/img/banner4.png" class="d-block w-100" alt="banner 4" />
+            <img src="/assets/img/banner4.png" class="d-block w-100" alt="banner 4" />
           </div>
         </div>
         <div id="container" class="d-flex flex-column justify-content-center align-items-center">
-          <img src="assets/img/logo256.png" alt="logo" width="70" />
+          <img src="/assets/img/logo256.png" alt="logo" width="70" />
           <h1 class="text-light p-2">The Golden Pearl</h1>
           <p class="text-light p-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget nunc a nibh vestibulum viverra. Sed vitae erat nec justo cursus malesuada.</p>
         </div>
@@ -27,7 +27,7 @@ function App() {
 
       <div id="WhoAreWe" class="d-flex justify-content-around m-4">
         <div class="mx-3">
-          <img src="assets/img/old_house.png" alt="img" />
+          <img src="/assets/img/old_house.png" alt="img" />
         </div>
         <div>
           <h1>Who Are We ?</h1>
