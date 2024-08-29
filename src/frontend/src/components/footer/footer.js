@@ -7,7 +7,7 @@ function App() {
         </div>
         <h4 class="d-flex justify-content-center py-2">The Golden Pearl</h4>
         <div class="d-flex justify-content-around">
-          <a href="/" class="text-black text-decoration-none">Github Repository</a>
+          <a href="https://github.com/EthannSchneider/the-golden-pearl" class="text-black text-decoration-none">Github Repository</a>
           <a href="/" class="text-black text-decoration-none">Contact Us</a>
         </div>
       </div>
