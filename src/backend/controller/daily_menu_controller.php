@@ -44,6 +44,10 @@ class DailyMenuController {
             $dailyMenu = DailyMenu::create(new DateTime());
         }
 
+        if ($dailyMenu->getDate()->format('Y-m-d') != (new DateTime())->format('Y-m-d')) {
+            $dailyMenu = DailyMenu::create(new DateTime());
+        }
+
         $meals = "";
         try {
             $meals = new Meals($_POST["meals_name"]);
