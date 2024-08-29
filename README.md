@@ -16,6 +16,25 @@ This is a website for a restaurant called The Golden Pearl. The website is a tem
 ./build.sh
 ```
 
+## Implementing
+
+### Apache2 
+
+you will need to add this config 
+```conf
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ /index.php [NC,L,QSA]
+```
+and add sqlite3 to dependency
+```bash
+apt install php8.2-sqlite3
+a2enmod proxy_fcgi
+a2enconf php8.2-fpm
+```
+
+
 ## Author
 - [Ethann Schneider](https://github.com/EthannSchneider/)
 
