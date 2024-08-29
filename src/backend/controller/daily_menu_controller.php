@@ -12,7 +12,7 @@ $entry = [
             "/api/daily_menu" => "addMeals()"
         ],
         "DELETE" => [
-            "/api/daily_menu" => "deleteMeals()"
+            "/api/daily_menu/:name" => "deleteMeals(:name)"
         ]
     ]
 ];
@@ -60,13 +60,10 @@ class DailyMenuController {
         }
     }
 
-    public function deleteMeals() {
+    public function deleteMeals($name) {
         if(!AuthUtils::isAuthenticated()) {
             ResponseUtils::unauthorized();
             return;
-        }
-        if (!isset($_POST["meals_name"])) {
-            ResponseUtils::badRequest();
         }
 
         $dailyMenu = $this->getLatestDailyMenu();
@@ -77,7 +74,7 @@ class DailyMenuController {
 
         $meals = "";
         try {
-            $meals = new Meals($_POST["meals_name"]);
+            $meals = new Meals($name);
         } catch (MealsNotExistException) {
             $this->mealsNotExistException();
             return;

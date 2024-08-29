@@ -5,6 +5,7 @@ session_start();
 
 $route = $_SERVER['REQUEST_URI'] ?? '/';
 $route = explode('?', $route)[0];
+$route = str_replace("%20", " ", $route);
 
 if (str_starts_with($route, '/api')) {
     require 'router.php';

@@ -8,12 +8,21 @@ $entry = [
             "/api/auth/login" => "login()"
         ],
         "GET" => [
+            "/api/auth" => "is_login()",
             "/api/auth/logout" => "logout()"
         ]
     ]
 ];
 
 class AuthController {
+    public function is_login() {
+        if(AuthUtils::isAuthenticated()) {
+            echo '{"authenticated": true}';
+        } else {
+            echo '{"authenticated": false}';
+        }
+    }
+
     public function login() {
         if(AuthUtils::isAuthenticated()) {
             echo '{"success": true, "message": "Already logged in"}';

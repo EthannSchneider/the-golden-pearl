@@ -66,7 +66,7 @@ class Meals {
     }
 
     public function __tostring(): string {
-        return "{\"name\": \"{$this->getName()}\", \"Description\": \"{$this->getDescription()}\", \"Calories\": \"{$this->getCalories()}\"}";
+        return "{\"name\": \"{$this->getName()}\", \"description\": \"{$this->getDescription()}\", \"calories\": \"{$this->getCalories()}\"}";
     }
 
 }

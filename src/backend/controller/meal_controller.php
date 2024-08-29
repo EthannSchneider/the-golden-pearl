@@ -12,7 +12,7 @@ $entry = [
             "/api/meals" => "createMeals()"
         ],
         "DELETE" => [
-            "/api/meals" => "deleteMeals()"
+            "/api/meals/:name" => "deleteMeals(:name)"
         ]
     ]
 ];
@@ -62,19 +62,14 @@ class MealsController {
         echo strval($meals);
     }
 
-    public function deleteMeals() {
+    public function deleteMeals(string $name) {
         if(!AuthUtils::isAuthenticated()) {
             ResponseUtils::unauthorized();
             return;
         }
 
-        if (!isset($_POST["name"])) {
-            ResponseUtils::badRequest();
-            return;
-        }
-
         try {
-            Meals::delete($_POST["name"]);
+            Meals::delete($name);
         } catch(MealsNotExistException) {
             $this->mealsNotExistException();
             return;
