@@ -25,7 +25,7 @@ you will need to add this config
 RewriteEngine on
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ /index.php [NC,L,QSA]
+RewriteRule ^(.*)$ /index.php [B,NC,L,QSA]
 ```
 and add sqlite3 to dependency
 ```bash
