@@ -8,8 +8,8 @@ export function getMeal(name) {
     return axios.get("/api/meals/" + name);
 }
 
-export function createMeal(meal_name, description, calories) {
-    return axios.post("/api/meals", { name: meal_name, description: description, calories: calories });
+export function createMeal(meal_name, description, calories, price) {
+    return axios.post("/api/meals", { name: meal_name, description: description, calories: calories, price: price });
 }
 
 export function deleteMeal(name) {

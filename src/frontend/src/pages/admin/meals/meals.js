@@ -21,6 +21,7 @@ function App() {
             <div class="d-flex justify-content-center align-items-center"> 
                 <input id="create_name" type="text" placeholder="name"/>
                 <input id="create_calories" type="number" placeholder="Calories"/>
+                <input id="create_price" type="number" placeholder="Price in CHF"/>
                 <a onClick={onClickCreateMeals} class="text-black text-decoration-none border rounded-3 p-1">Create</a>
             </div>
             <div class="d-flex justify-content-center align-items-center"> 
@@ -40,11 +41,15 @@ function onClickCreateMeals(event) {
     var name = document.getElementById("create_name").value
     var description = document.getElementById("create_description").value
     var calories = document.getElementById("create_calories").value
+    var price = document.getElementById("create_price").value
 
     if (name !== "" || description !== "") {
-        createMeal(name, description, calories)
+        createMeal(name, description, calories, price)
         .then(response => {
             getAllMeals()
+        })
+        .catch(error => {
+            console.log(error);
         });
     }
 }

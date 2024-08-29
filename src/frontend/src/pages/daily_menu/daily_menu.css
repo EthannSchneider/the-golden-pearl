@@ -1,0 +1,10 @@
+@media (max-width: 700px) {
+    .back-on-mobile {
+        flex-direction: column;
+    }
+
+    .hide-on-mobile {
+        position: absolute;
+        left: -999px;
+    }
+}
