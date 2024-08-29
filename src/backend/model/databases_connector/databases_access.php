@@ -31,9 +31,11 @@ interface DatabasesAccess {
 
     public function getMealCalories(string $meals_name);
 
+    public function getMealPrice(string $meals_name);
+
     public function allMeals(): array;
 
-    public function addMeals(string $name, string $description, int $calories = null): void; 
+    public function addMeals(string $name, string $description, int $calories = null, int $price): void; 
 
     public function removeMeals(string $name): void;
 }

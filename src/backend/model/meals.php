@@ -29,7 +29,7 @@ class Meals {
         }, $db->allMeals());
     }
 
-    public static function create(string $name, string $description, int|null $calories): self {
+    public static function create(string $name, string $description, int|null $calories, int $price): self {
         $databaseChoose = new DatabasesChoose();
         $db = $databaseChoose->getDatabase();
 
@@ -37,7 +37,7 @@ class Meals {
             throw new MealsAlreadyExistException();
         }
 
-        $db->addMeals($name, $description, $calories);
+        $db->addMeals($name, $description, $calories, $price);
 
         return new Meals($name);
     }
@@ -65,8 +65,12 @@ class Meals {
         return $this->db->getMealCalories($this->name);
     }
 
+    public function getPrice() {
+        return $this->db->getMealPrice($this->name);
+    }
+
     public function __tostring(): string {
-        return "{\"name\": \"{$this->getName()}\", \"description\": \"{$this->getDescription()}\", \"calories\": \"{$this->getCalories()}\"}";
+        return "{\"name\": \"{$this->getName()}\", \"description\": \"{$this->getDescription()}\", \"calories\": \"{$this->getCalories()}\", \"price\": \"{$this->getPrice()}\"}";
     }
 
 }

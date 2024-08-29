@@ -52,7 +52,7 @@ class MealsController {
         $meals = '';
 
         try {
-            $meals = Meals::create($_POST["name"], $_POST["description"], $_POST["calories"]);
+            $meals = Meals::create($_POST["name"], $_POST["description"], $_POST["calories"], $_POST["price"] ?? 0);
         }catch(MealsAlreadyExistException) {
             ResponseUtils::response("Meals already exist", 409);
             return;

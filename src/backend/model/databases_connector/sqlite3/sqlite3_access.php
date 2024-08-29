@@ -8,7 +8,7 @@ class Sqlite3Access implements DatabasesAccess {
     public function __construct(string $path) {
         $this->db = new Sqlite3Connector($path);
 
-        if ($this->db->get("SELECT name FROM sqlite_master WHERE type='table' AND name='users';") == []) {
+        if ($this->db->get("SELECT name FROM sqlite_master WHERE type='table' AND name='users'") == []) {
             $this->createDb();
 
             // temporary add defaut admin user
@@ -83,14 +83,18 @@ class Sqlite3Access implements DatabasesAccess {
         return $this->db->get("SELECT calories FROM meals WHERE name=:meals", [":meals" => $meals_name])[0]["calories"];
     }
 
+    public function getMealPrice(string $meals_name) {
+        return $this->db->get("SELECT price FROM meals WHERE name=:meals", [":meals" => $meals_name])[0]["price"];
+    }
+
     public function allMeals(): array {
         return $this->reorderArray(
             $this->db->get("SELECT name FROM meals")
         );
     }
 
-    public function addMeals(string $name, string $description, int $calories = null): void {
-        $this->db->modify("INSERT INTO meals (name, description, calories) VALUES (:name, :description, :calories)", [":name" => $name, ":description" => $description, ":calories" => $calories]);
+    public function addMeals(string $name, string $description, int $calories = null, int $price): void {
+        $this->db->modify("INSERT INTO meals (name, description, calories, price) VALUES (:name, :description, :calories, :price)", [":name" => $name, ":description" => $description, ":calories" => $calories, ":price" => $price]);
     }
 
     public function removeMeals(string $name): void {
